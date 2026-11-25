@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back to Kiwi &amp; Mousse HQ…</title>
+<style>body{font-family:system-ui,sans-serif;background:#f3f3f0;color:#1c1c1e;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#1c1c1e}</style>
+<script>
+  // TikTok only accepts public https return addresses, so it sends you here first.
+  // This page immediately forwards the one-time sign-in code to the app running on your own Mac.
+  // The code is useless without the app's secret key, which never leaves that Mac.
+  (function () {
+    var target = "http://localhost:3000/api/connect/tiktok/callback" + (location.search || "");
+    document.addEventListener("DOMContentLoaded", function () { document.getElementById("go").href = target; });
+    location.replace(target);
+  })();
+</script>
+</head>
+<body>
+<p>🐾 Taking you back to your app… <a id="go" href="http://localhost:3000/settings">Continue</a></p>
+</body>
+</html>
